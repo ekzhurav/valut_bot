@@ -4,14 +4,6 @@ from extensions import APIException, CryptoConverter
 
 bot = telebot.TeleBot(TOKEN)
 
-#@bot.message_handler()
-#def echo_test(message: telebot.types.Message):
-#    bot.send_message(message.chat.id, 'hello')
-
-#bot.polling()
-
-
-
 @bot.message_handler(commands=['start', 'help'])
 def help(message: telebot.types.Message):
     text = 'Чтобы начать работу введите команду боту в следующем формате:\n<имя валюты> \
